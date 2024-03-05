@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
+:root {
+    --header-height: 3.5rem;
+  
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: hsl(140, 40%, 48%);
+    --first-color-alt: hsl(140, 40%, 44%);
+    --title-color: hsl(140, 4%, 12%);
+    --text-color: hsl(140, 4%, 40%);
+    --text-color-light: hsl(140, 4%, 64%);
+    --white-color: hsl(0, 0%, 100%);
+    --body-color: hsl(0, 0%, 100%);
+    --container-color: hsl(0, 0%, 95%);
+    --shadow-img: drop-shadow(0 8px 12px hsla(0, 0%, 0%, .2));
+    --filter-img: invert(1);
+  
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Poppins", sans-serif;
+    --second-font: "Cherry Bomb One", cursive;
+    --biggest-font-size: 3rem;
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+  
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(0, 0%, 100%);
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Set a background color for the page */
+}
+
+.header{
+    background-color: rgb(237, 237, 225);
+    height: 100vh;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f4f4f4;
+    color: rgb(20, 9, 9);
+    padding: 8px 25px;
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+.logo{
+    margin-left: 100px;
+}
+.logo img{
+    width: 130px;
+}
+.links{
+    margin-right: 100px;
+}
+
+.links ul{
+    display: flex;
+    list-style-type: none;
+    margin-left: auto;
+}
+.links ul li{
+    margin-right: 20px;
+
+}
+.links ul li a{
+    padding: 10px 20px;
+    color: inherit;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: .5s;
+}
+
+.links ul li a:hover{
+    color: var(--first-color);
+}
+
+
+
+
+/* Add a box shadow and background when scrolling */
+nav.scrolled {
+    background-color: #f4f4f4;
+    box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.164);
+}
+
+/* ------hero section -------- */
+.hero{
+    display: flex;
+    margin-top: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+    justify-content: space-between;
+    /* box-sizing: border-box; */
+    padding: 0;
+    
+}
+/* .hero-content{
+    flex-basis: 100%;
+    padding: 0;
+} */
+.hero-content h1{
+    font-family: var(--second-font);
+    font-size: 70px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    color: var(--title-color);
+    line-height: 70px;
+    font-weight: 100;
+}
+.hero-content h5{
+    font-size: 16px;
+    margin-bottom: 40px;
+    padding-right: 100px;
+    color: var(--text-color-light);
+}
+/* .hero-image{
+    flex-basis: 50%;
+} */
+.hero-image img{
+    width: 600px;
+    
+}
+.hero-btn{
+    padding: 14px 30px;
+    border-radius: 50px;
+    background-color: var(--first-color);
+    border: 2px solid var(--first-color);
+    text-decoration: none;
+    color: #f4f4f4;
+    font-size: 16px;
+    font-weight: 700px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.hero-btn:hover{
+    border: 2px solid var(--first-color);
+    background-color: #f4f4f4;
+    color: var(--first-color);
+}
+.about{
+    margin-top: 0;
+}
+.about-row{
+    display: flex;
+    /* margin-top: 40px; */
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+    justify-content: space-between;
+    /* box-sizing: border-box; */
+    padding: 0px 0px;
+    
+}
+.about-col{
+    padding: 50px;
+}
+.about-col img{
+    width: 500px;
+}
+
+.about-col h2{
+    font-size: 2rem;
+    font-family: var(--second-font);
+    letter-spacing: 1px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.about-col p{
+    font-size: 1rem;
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+.box-row{
+    display: flex;
+    gap: 50px;
+}
+
+.box-section{
+    width: 80%;
+    margin: auto;
+    padding: 50px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    background-color: rgb(233, 229, 229);
+    position: relative;
+    align-items: center;
+    border-radius: 50px;
+    transition: .2s;
+    transform: skewY(4deg);
+}
+.box:hover{
+    box-shadow: 4px 4px 29px 5px rgba(58, 58, 58, 0.257);
+}
+.box img{
+    width: 60%;
+    position: absolute;
+    top: 11%;
+    left: 22%;
+    margin: auto;
+    transition: 0.2s;
+}
+.box img:hover{
+    top: 9%;
+}
+.box h2{
+    font-family: var(--second-font);
+    letter-spacing: 1px;
+    font-weight: 80;
+}
+
+.box h2, p{
+    text-align: center;
+    /* margin: 10px, 0; */
+    padding-bottom: 5px;
+
+}
+.box p{
+    padding-bottom: 43px;
+}
+
+.blank{
+    height: 50px;
+}
+
+/* ---------bg section------- */
+
+.bg{
+    min-height: 30vh;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(bg2.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    justify-content: center;
+    padding: 60px;
+
+}
+.bg h2{
+    color: #f4f4f4;
+    font-family: var(--second-font);
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-bottom: 30px;
+    
+}
+.subscribe{
+    background-color: red;
+    border: 1px solid red;
+    margin-top: 20px;
+}
+
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* --------footer-------- */
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 150px;
+    box-sizing: border-box;
+}
+
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+    
+}
+
+.footer p{
+    color: #7b7b7b;
+}
+
+.icons .fa-brands{
+    color: var(--first-color);
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+/* --------contact section---------- */
+
+.contac-us{
+    margin-top: 5%;
+    width: 80%;
+    margin: auto;
+
+}
+.contact-col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+}
+
+.contact-col div .fa-solid{
+    font-size: 28px;
+    color: var(--first-color);
+    margin: 10px;
+    margin-right: 30px;
+
+}
+
+.contact-col div p{
+    padding: 0;
+    margin-left: 0;
+    text-align: left;
+    color: #555;
+}
+
+
+
+.contact-col div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+
+.contact-col input, .contact-col textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.contact-col div span {
+    color: #555; /* Set the desired color */
+}
+
+.contact-col div p {
+    color: #959292; /* Set the desired color */
+}
+
+
+/* Apply custom styling to placeholder text */
+.contact-col input::placeholder,
+.contact-col textarea::placeholder {
+    color: #959292; /* Set the color of the placeholder text */
+    font-family: 'Poppins', sans-serif; /* Set the font family of the placeholder text */
+    font-size: 16px; /* Set the font size of the placeholder text */
+    font-weight: 400; /* Set the font weight of the placeholder text */
+}
